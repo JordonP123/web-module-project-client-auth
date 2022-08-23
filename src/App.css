@@ -36,5 +36,58 @@
 /*===========Login==================*/
 
 .loginContainer{
-  font-size: 2rem;
+  width: 70%;
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
+
+.loginHeader{
+  font-size: 10rem;
+  font-weight: bolder;
+  text-align: center;
+  height: 8vh;
+}
+
+.formContainer{
+  text-align: center;
+}
+
+.labels{
+  font-size: 4rem;
+  margin-right: 25%;
+  font-weight: bolder;
+}
+
+.inputs{
+  width: 45%;
+  height: 7vh;
+  background-color: black;
+  margin-bottom: 3.5%;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.submit:hover{
+  cursor: pointer;
+}
+
+.error{
+  font-size: 5rem;
+  color: red;
+  text-align: center;
+}
+
+/*===========end of login========*/
+/*===========addFriends minor adjustments from login CSS========*/
+.addFriendsInputs{
+ width: 50.5%
+}
+
+.addFriendsSubmit{
+  width: 51.3%
+}
+/*========end of addFriends adjustments========*/
+
+
