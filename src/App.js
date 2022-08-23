@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Link, Switch} from 'react-router-dom';
+import { Route, Link, Routes} from 'react-router-dom';
 import Login from './components/login'
 import FriendsList from './components/friendsList'
 import AddFriends from './components/addFriends'
@@ -17,11 +17,13 @@ function App() {
         <Link className='links' to = '/friends/add'>ADDFRIEND</Link>
         <Link className='links' to = '/logout'>LOGOUT</Link>
       </nav>
-      <Route exact path='/' component={Login}></Route>
-      <Route path='/login' component={Login}></Route>
-      <Route path='/friends' component={FriendsList}></Route>
-      <Route path='/friends/add' component={AddFriends}></Route>
-      <Route path='/logout' component={Logout}></Route>
+      <Routes>
+      <Route exact path='/' element={<Login/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
+      <Route path='/friends' element={<FriendsList/>}></Route>
+      <Route path='/friends/add' element={<AddFriends/>}></Route>
+      <Route path='/logout' element={<Logout/>}></Route>
+      </Routes>
     </div>
   );
 }

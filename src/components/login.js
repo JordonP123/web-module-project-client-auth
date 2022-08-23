@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const initalLogin = {
     username: '',
@@ -12,7 +12,7 @@ function Login() {
     const [login, setLogin] = useState(initalLogin)
     const [error, setError] = useState(null)
 
-    const history = useHistory()
+    const Navigate = useNavigate()
 
     const onChange = (evt) => {
         const { name, value } = evt.target
@@ -24,7 +24,7 @@ function Login() {
         axios.post(`http://localhost:9000/api/login`, login)
             .then(res => {
                 localStorage.setItem('token', res.data.token)
-                history.push('/friends')
+                Navigate('/friends')
             })
             .catch(err => setError(err.response.data.error))
     }
