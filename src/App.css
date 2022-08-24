@@ -81,6 +81,7 @@
 
 /*===========end of login========*/
 /*===========addFriends minor adjustments from login CSS========*/
+
 .addFriendsInputs{
  width: 50.5%
 }
@@ -88,6 +89,58 @@
 .addFriendsSubmit{
   width: 51.3%
 }
+
 /*========end of addFriends adjustments========*/
+/*========friendsList============*/
 
+.friendsListContainer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 80vh
+}
 
+.friendsListH1{
+  font-size: 8rem;
+}
+
+.friendsListLi{
+  font-size: 3.5rem;
+  padding: 1%;
+  width: 100%
+}
+
+.friendsListUl{
+  list-style: inside;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+/*=========end of friendsList==========*/
+/*=========logout==========*/
+
+.logout{
+  height: 30vh;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.logoutDiv{
+  font-size: 7rem;
+  text-align: center;
+}
+
+.logoutBtn{
+  font-size: 8rem;
+  margin: 1%;
+  margin-left: 20%;
+}
+
+.logoutBtn:hover{
+  cursor: pointer;
+}

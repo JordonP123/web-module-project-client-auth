@@ -12,7 +12,7 @@ function Login() {
     const [login, setLogin] = useState(initalLogin)
     const [error, setError] = useState(null)
 
-    const Navigate = useNavigate()
+    const navigate = useNavigate()
 
     const onChange = (evt) => {
         const { name, value } = evt.target
@@ -24,7 +24,7 @@ function Login() {
         axios.post(`http://localhost:9000/api/login`, login)
             .then(res => {
                 localStorage.setItem('token', res.data.token)
-                Navigate('/friends')
+                navigate('/friends')
             })
             .catch(err => setError(err.response.data.error))
     }
